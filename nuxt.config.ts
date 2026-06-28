@@ -40,6 +40,7 @@ export default defineNuxtConfig({
   },
   routeRules: {
     "/spa/**": { ssr: false },
+    "/callback": { ssr: false },
   },
 
   vite: {

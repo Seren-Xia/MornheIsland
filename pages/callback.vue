@@ -34,11 +34,13 @@ const router = useRouter();
 
 const login = async () => {
     try {
-        const { code, state, loginChannel } = router.currentRoute.value.query as {
-          code?: string | string[];
-          state?: string | string[];
-          loginChannel?: string | string[];
-        };
+        // 静态部署下直接从 URL 读取 query，避免 Nuxt 路由 hydration 时 query 丢失
+        const raw = new URLSearchParams(window.location.search);
+        const code = raw.get("code") || undefined;
+        const state = raw.get("state") || undefined;
+        const loginChannel = raw.get("loginChannel") || undefined;
+
+      console.log("code:", code, "state:", state, "loginChannel:", loginChannel);
 
         if (!code || !state || !loginChannel) {
             // 处理登录缺参数
@@ -74,7 +76,7 @@ const login = async () => {
 
 // 打开页面就自动call方法
 onMounted(() => {
-    login();
+    if (import.meta.client) login();
 });
 
 // 页面信息
