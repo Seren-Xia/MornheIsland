@@ -1,0 +1,3 @@
+[submodule "backend"]
+    path = "backend"
+    url = "https://github.com/HeyCrab3/MornheIsland-Backend.git"

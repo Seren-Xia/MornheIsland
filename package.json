@@ -1,7 +1,10 @@
 {
   "name": "MornheIsland-Frontend",
-  "private": true,
+  "private": false,
   "type": "module",
+  "license": "AGPL-3.0-only",
+  "repository": "https://github.com/HeyCrab3/MornheIsland",
+  "author": "HeyCrab3",
   "scripts": {
     "build": "nuxt build",
     "dev": "nuxt dev",
