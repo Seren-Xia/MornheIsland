@@ -10,7 +10,7 @@ body:
         感谢您进行 Bug 反馈。请在上面的标题文本框⬆️起一个能够清晰描述您的问题的标题，便于开发者解决您的问题。
         
         > [!important]
-        > 重要：如果要提出**多个 Bug**，请为每一个 Bug 开一个单独的 Issue。
+        > 重要：如果要提出**多个 Bug**，请为每一个 Bug 开一个单独的 issue。
         >
         > 如果您不知道如何有效、精准地表述，我们建议您先阅读[《提问的智慧》](https://github.com/ryanhanwu/How-To-Ask-Questions-The-Smart-Way/blob/main/README-zh_CN.md)。
         
@@ -60,6 +60,26 @@ body:
         3. ……
     validations:
       required: true
+  - type: textarea
+    id: system-environment
+    attributes:
+      label: 操作环境信息
+      description: |
+        在您发现这个Bug的运行环境。
+      placeholder: |
+        UA: 
+        系统：
+        浏览器：
+        莫宁岛版本：
+        是否为自托管模式：
+      validations:
+        required: true
+  - type: textarea
+    id: user-info
+    attributes:
+      label: 用户信息（可选）
+      description: |
+        如果是在登录状态下出现的问题，请提供用户ID（在用户信息页面可以看到）。
   - type: textarea
     id: screenshots
     attributes:
